@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Browse a CSSBuy spreadsheet with real HipobuyFind listings for shoes, hoodies, tees and jackets. Compare reference prices, sizes and warehouse QC before ordering.">
+<title>CSSBuy spreadsheet | Product Finds, Sizing &amp; QC Guide</title>
+<style>
+:root{font:100%/1.6 system-ui,sans-serif;color:#e9f5ef;background:#10221b;color-scheme:dark}*{box-sizing:border-box}body{margin:0}main,footer{width:min(70rem,92vw);margin:auto}header{text-align:center;padding:clamp(3rem,9vw,8rem) 0;background:radial-gradient(ellipse at top,#275841,transparent 75%)}h1{font-size:clamp(2.5rem,8vw,6rem);letter-spacing:-.065em;line-height:1;margin:0}h2{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15}header p{max-width:36rem;margin:1.3rem auto;color:#ceded5}.cta{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap}.cta a{padding:.7rem 1.15rem;border:1px solid #95e5b6;border-radius:99px;font-weight:700;text-decoration:none}.cta a:first-child{background:#95e5b6;color:#10221b}a{color:#a9efc4}section{margin:0 0 3.5rem}label,input{display:block}input{width:min(100%,28rem);padding:.65rem;margin:.35rem 0 1rem;border:1px solid #799b88;border-radius:.5rem;background:#18352a;color:inherit;font:inherit}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:.85rem}article,details{background:#18352a;border:1px solid #355c4a;border-radius:.85rem;padding:1rem}article h3{margin:.3rem 0;font-size:1.08rem}small,footer{color:#c5d9cc}details+details{margin-top:.65rem}summary{cursor:pointer;font-weight:700}li+li{margin-top:.65rem}footer{border-top:1px solid #355c4a;padding:1.25rem 0 2rem}:focus-visible{outline:3px solid #ffe6a0;outline-offset:4px}
+</style>
+<link rel="canonical" href="https://kakobuyfinds.github.io/vkygm/">
+</head>
+<body>
+<!-- Search benchmark: cssbuyhome.com emphasizes search and categories, grails.fit emphasizes catalog scale and historical QC, and cssbuysh.com emphasizes sizing and shipping guides. This page adds source IDs, explicit item-only prices, and category-specific checks. Search positions vary by location and date.
+Indexing pending: the public URL was not supplied. Once deployed, submit its URL in Google Search Console and Bing Webmaster Tools using verified site access. -->
+<main>
+<header>
+<h1>CSSBuy spreadsheet</h1>
+<p>Compare shoes, hoodies, tees and jackets from HipobuyFind, then check seller measurements, warehouse photos and the full cost before ordering.</p>
+<div class="cta"><a href="https://hipobuyfind.com">CSSBuy spreadsheet</a><a href="https://hipobuyfind.com">Buy it now</a></div>
+</header>
+<section aria-labelledby="catalog">
+<h2 id="catalog">Browse the product catalog</h2>
+<p>Selected listings from HipobuyFind. Prices are CNY item references. Check the source for current options, availability and total cost.</p>
+<div id="filter" hidden><label for="query">Filter by product, category or item ID</label><input id="query" type="search" aria-controls="products"><p id="count" role="status"></p></div>
+<div class="grid" id="products">
+<article><small>Shoes · 148188</small><h3><a href="https://hipobuyfind.com/goods-148188.html">Black Canvas Low-Top Sneakers with Gum Sole</a></h3><p>¥450.00</p><small>Check insole length and outsole photos.</small></article>
+<article><small>Hoodies · 154936</small><h3><a href="https://hipobuyfind.com/goods-154936.html">Gray Hoodie</a></h3><p>¥300.00</p><small>Compare chest width and body length.</small></article>
+<article><small>T-Shirts · 154920</small><h3><a href="https://hipobuyfind.com/goods-154920.html">Graphic Short-Sleeve T-Shirt</a></h3><p>¥105.00</p><small>Check print placement and shoulder width.</small></article>
+<article><small>Jackets · 154851</small><h3><a href="https://hipobuyfind.com/goods-154851.html">Hooded Quick-Dry Jacket</a></h3><p>¥157.14</p><small>Check sleeve length, seams and zipper alignment.</small></article>
+</div>
+</section>
+<section aria-labelledby="guide">
+<h2 id="guide">How to compare finds before ordering</h2>
+<ol>
+<li><strong>Open the product page.</strong> Check the selected size and color, then find the original seller link if it is available. Confirm CSSBuy accepts that link before placing an order.</li>
+<li><strong>Use measurements you already know.</strong> Measure a similar garment flat and compare it with the seller’s chart. For shoes, compare insole length in centimeters.</li>
+<li><strong>Review your warehouse QC photos.</strong> Confirm that the label and color match your selection. Ask for a ruler photo if an important measurement is missing.</li>
+<li><strong>Estimate the delivered cost.</strong> Add applicable domestic delivery, service fees, international shipping and destination charges. Check whether the shipping line uses actual or volumetric weight.</li>
+</ol>
+</section>
+<section aria-labelledby="faq">
+<h2 id="faq">Frequently asked questions</h2>
+<details><summary>What is a CSSBuy spreadsheet?</summary><p>It is a directory you can use to shortlist products and find their source listings before checking whether CSSBuy can order them.</p></details>
+<details><summary>Where do the two buttons lead?</summary><p>Both open HipobuyFind. Open an individual product to review its source information and current options.</p></details>
+<details><summary>Can I use older QC photos to choose a size?</summary><p>Use older photos for an initial comparison. Confirm measurements against the seller’s current chart and request photos of your own item when available.</p></details>
+</section>
+</main>
+<footer>Independent shopping guide. Catalog source: <a href="https://hipobuyfind.com">HipobuyFind</a>.</footer>
+<script>
+const filter = document.querySelector('#filter');
+const query = document.querySelector('#query');
+const count = document.querySelector('#count');
+const products = Array.from(document.querySelectorAll('#products article'));
+function updateProducts() {
+  const terms = query.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  let visible = 0;
+  for (const product of products) {
+    const description = product.textContent.toLowerCase();
+    product.hidden = !terms.every(term => description.includes(term));
+    if (!product.hidden) visible++;
+  }
+  count.textContent = visible === 1 ? '1 matching listing' : visible + ' matching listings';
+}
+filter.hidden = false;
+query.addEventListener('input', updateProducts);
+updateProducts();
+</script>
+</body>
+</html>
